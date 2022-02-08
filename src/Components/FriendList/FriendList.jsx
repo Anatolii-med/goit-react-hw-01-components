@@ -1,7 +1,10 @@
 import FriendItem from "./FriendItem";
+
+import { FriendListUl } from "./FriendList.styles";
+
 const FriendList = ({ friends }) => {
 	return (
-		<ul>
+		<FriendListUl>
 			{friends.map((friend) => {
 				return (
 					<FriendItem
@@ -12,7 +15,7 @@ const FriendList = ({ friends }) => {
 					/>
 				);
 			})}
-		</ul>
+		</FriendListUl>
 	);
 };
 

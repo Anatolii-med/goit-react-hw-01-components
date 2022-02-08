@@ -1,13 +1,16 @@
 import PropTypes from "prop-types";
+import { FriendItemLi, IsOnLineSpan, FriendNameP } from "./FriendItem.styles";
 
 const FriendItem = (friends) => {
 	return (
 		<>
-			<li key={friends.id}>
-				<span>{friends.isOnline}</span>
+			<FriendItemLi key={friends.id}>
+				<IsOnLineSpan isOnline={friends.isOnline}>
+					{friends.isOnline}
+				</IsOnLineSpan>
 				<img src={friends.avatar} alt={friends.name} width="48" />
-				<p>{friends.name}</p>
-			</li>
+				<FriendNameP>{friends.name}</FriendNameP>
+			</FriendItemLi>
 		</>
 	);
 };
