@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const StatData = ({ stats }) => {
 	return (
 		<>
@@ -14,3 +16,13 @@ const StatData = ({ stats }) => {
 };
 
 export default StatData;
+
+StatData.propTypes = {
+	stats: PropTypes.arrayOf(
+		PropTypes.exact({
+			id: PropTypes.string,
+			label: PropTypes.string.isRequired,
+			percentage: PropTypes.number.isRequired,
+		})
+	),
+};

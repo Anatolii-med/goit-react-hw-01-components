@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const FriendItem = (friends) => {
 	return (
 		<>
@@ -11,3 +13,14 @@ const FriendItem = (friends) => {
 };
 
 export default FriendItem;
+
+FriendItem.propTypes = {
+	friends: PropTypes.arrayOf(
+		PropTypes.exact({
+			id: PropTypes.number.isRequired,
+			friends: PropTypes.bool.isRequired,
+			avatar: PropTypes.string.isRequired,
+			name: PropTypes.string.isRequired,
+		})
+	),
+};
