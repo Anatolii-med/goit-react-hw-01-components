@@ -1,16 +1,16 @@
 import PropTypes from "prop-types";
-
+import { StatDataWrapUl, StatDataItemLi } from "./StatData.style";
 const StatData = ({ stats }) => {
 	return (
 		<>
-			<ul>
+			<StatDataWrapUl>
 				{stats.map((stat) => (
-					<li key={stat.id}>
+					<StatDataItemLi key={stat.id}>
 						<span>{stat.label}</span>
 						<span>{stat.percentage}</span>
-					</li>
+					</StatDataItemLi>
 				))}
-			</ul>
+			</StatDataWrapUl>
 		</>
 	);
 };

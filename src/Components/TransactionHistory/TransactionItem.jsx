@@ -1,12 +1,16 @@
 import PropTypes from "prop-types";
+import {
+	TransactionItemTr,
+	TransactionItemCelTd,
+} from "./TransactionItem.style";
 
 const TransactionItem = ({ id, type, amount, currency }) => {
 	return (
-		<tr key={id}>
-			<td>{type}</td>
-			<td>{amount}</td>
-			<td>{currency}</td>
-		</tr>
+		<TransactionItemTr key={id}>
+			<TransactionItemCelTd>{type}</TransactionItemCelTd>
+			<TransactionItemCelTd>{amount}</TransactionItemCelTd>
+			<TransactionItemCelTd>{currency}</TransactionItemCelTd>
+		</TransactionItemTr>
 	);
 };
 export default TransactionItem;

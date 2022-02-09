@@ -1,12 +1,14 @@
 import StatTitle from "./StatTitle";
 import StatData from "./StatData";
 
+import { StatItemsWrapDiv } from "./Statistic.style";
+
 const Statistics = ({ title, stats }) => {
 	return (
-		<div>
+		<StatItemsWrapDiv>
 			<StatTitle title={title} />
 			<StatData stats={stats} />
-		</div>
+		</StatItemsWrapDiv>
 	);
 };
 
